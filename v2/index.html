@@ -583,18 +583,39 @@
     .topbar{
       width:100%;
       box-sizing:border-box;
+      gap:10px;
       overflow:hidden;
-    }
-    .topbar .desktop-nav{
-      display:none;
+      padding-left:16px;
+      padding-right:16px;
     }
     .topbar .mark2{
+      display:none;
+    }
+    .topbar .desktop-nav{
+      display:flex;
       flex:1 1 auto;
       min-width:0;
+      overflow-x:auto;
+      overflow-y:hidden;
+      justify-content:flex-start;
+      gap:18px;
+      margin:0;
+      padding:2px 0 5px;
+      scrollbar-width:none;
+      -webkit-overflow-scrolling:touch;
+    }
+    .topbar .desktop-nav::-webkit-scrollbar{
+      display:none;
+    }
+    .topbar .desktop-nav a{
+      flex:0 0 auto;
+      font-size:.78rem;
     }
     .topbar .btn.small{
       flex:0 0 auto;
       white-space:nowrap;
+      padding:11px 16px;
+      font-size:.76rem;
     }
   }
 
@@ -626,6 +647,54 @@
     .toc li:nth-child(3){
       padding-top:25px;
       padding-bottom:25px;
+    }
+  }
+
+
+  .benefit{
+    gap:8px;
+  }
+  .benefit h3{
+    margin-bottom:8px;
+  }
+  .benefit p{
+    margin-top:0;
+  }
+  .benefit-icon{
+    width:38px;
+    height:38px;
+    flex:0 0 38px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2.2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    margin-bottom:2px;
+  }
+  @media (max-width:640px){
+    .benefit{
+      gap:7px;
+    }
+    .benefit h3{
+      margin-bottom:7px;
+    }
+  }
+
+
+  /* Give the email field more horizontal room while keeping the CTA beside it. */
+  .signup-form input[type="email"]{
+    flex:1.35 1 0;
+    min-width:0;
+  }
+  .signup-form button{
+    flex:1 1 0;
+  }
+
+  @media (max-width:640px){
+    .signup-form input[type="email"],
+    .signup-form button{
+      flex:1 1 auto;
+      width:100%;
     }
   }
 
@@ -702,12 +771,12 @@
     </div>
     <div class="wrap divider-body">
       <ol class="toc">
-        <li data-reveal><span class="icon" aria-hidden="true">?</span><div><h3>Is freelancing right for you?</h3><p>The honest questions to ask before taking the leap, and What nobody tells you about making the switch.</p></div></li>
-        <li data-reveal><span class="icon" aria-hidden="true">✦</span><div><h3>Building your freelance toolkit</h3><p>How to pitch yourself, build a portfolio, find your niche, and figure out What to charge.</p></div></li>
-        <li data-reveal><span class="icon" aria-hidden="true">↗</span><div><h3>Finding clients you actually want</h3><p>Where opportunities come from, how to pitch, and the green and red flags to watch out for.</p></div></li>
-        <li data-reveal><span class="icon" aria-hidden="true">▤</span><div><h3>Running the business</h3><p>Contracts, invoices, feedback, payment delays, and all the unglamorous bits that keep things running.</p></div></li>
-        <li data-reveal><span class="icon" aria-hidden="true">✎</span><div><h3>Growing as a writer</h3><p>Discover your voice, navigate rejection, work alongside AI, and sharpen the skills that set you apart.</p></div></li>
-        <li data-reveal><span class="icon" aria-hidden="true">∞</span><div><h3>Making freelancing sustainable</h3><p>Burnout, uncertainty, creative slumps, and the everyday habits that make freelancing sustainable.</p></div></li>
+        <li data-reveal><div><h3>Is freelancing right for you?</h3><p>The honest questions to ask before taking the leap, and What nobody tells you about making the switch.</p></div></li>
+        <li data-reveal><div><h3>Building your freelance toolkit</h3><p>How to pitch yourself, build a portfolio, find your niche, and figure out What to charge.</p></div></li>
+        <li data-reveal><div><h3>Finding clients you actually want</h3><p>Where opportunities come from, how to pitch, and the green and red flags to watch out for.</p></div></li>
+        <li data-reveal><div><h3>Running the business</h3><p>Contracts, invoices, feedback, payment delays, and all the unglamorous bits that keep things running.</p></div></li>
+        <li data-reveal><div><h3>Growing as a writer</h3><p>Discover your voice, navigate rejection, work alongside AI, and sharpen the skills that set you apart.</p></div></li>
+        <li data-reveal><div><h3>Making freelancing sustainable</h3><p>Burnout, uncertainty, creative slumps, and the everyday habits that make freelancing sustainable.</p></div></li>
       </ol>
     </div>
     <div class="wave-divider wave-bottom wave-to-pink" aria-hidden="true">
@@ -725,14 +794,17 @@
     <div class="wrap wrap-wide divider-body">
       <div class="benefits">
         <div class="benefit" data-reveal>
+<svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 10h32v28H8z"/><path d="M14 17h20M14 24h14M14 31h9"/></svg>
           <div><h3>Find clarity in a chaotic career</h3>
           <p>Decision fatigue shouldn't stop you from choosing freelancing. This playbook simplifies the answers and hands you a framework to reuse across your career.</p></div>
         </div>
         <div class="benefit" data-reveal>
+<svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15"/><path d="M24 15v9l7 5"/></svg>
           <div><h3>Avoid costly, draining mistakes</h3>
           <p>Are you a copywriter or a content strategist? Learn What you actually bring to the table, spot your golden clients, and confidently turn down the bad ones.</p></div>
         </div>
         <div class="benefit" data-reveal>
+<svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 34l10-10 7 7 11-15"/><path d="M30 16h8v8"/></svg>
           <div><h3>Get out of survival mode</h3>
           <p>Freelancing is a solo job, but it doesn't have to feel like a lonely one. The right community and collaborators can turn a scramble for work into a generous, abundant way of working. We'll get you there.</p></div>
         </div>
