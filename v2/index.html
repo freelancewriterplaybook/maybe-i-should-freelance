@@ -784,17 +784,17 @@
     <p class="wink">Now close those 50 tabs already! Our Playbook is better, and it’s absolutely free.</p>
 
     <!--
-      FORM SETUP — read before you deploy:
-      Posts to your Kit (ConvertKit) form so subscribers still land in your existing
-      account and the automated delivery email still fires. In Kit: Grow → Landing
-      Pages & Forms → this form → Embed → "Formatted HTML" — copy the form's action
-      URL and the hidden "id" input value, and swap them in below.
+      FORM SETUP:
+      Posts directly to the MailerLite Playbook Signup form endpoint.
+      The form's MailerLite group assignment is handled by MailerLite.
+      No MailerLite visual embed styles are imported so the existing form design stays intact.
     -->
     <div class="signup-wrap">
-      <form class="signup" id="signup" action="https://app.kit.com/forms/REPLACE_WITH_YOUR_FORM_ID/subscriptions" method="post" target="signup-response">
-        <input type="hidden" name="id" value="REPLACE_WITH_YOUR_FORM_ID">
+      <form class="signup" id="signup" action="https://assets.mailerlite.com/jsonp/2586509/forms/196313320710472724/subscribe" method="post" target="signup-response">
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
         <label for="email_address" style="position:absolute;left:-9999px;">Email address</label>
-        <input type="email" name="email_address" id="email_address" placeholder="you@example.com" required aria-describedby="signup-status">
+        <input type="email" name="fields[email]" id="email_address" placeholder="you@example.com" autocomplete="email" required aria-describedby="signup-status">
         <button type="submit" class="btn" id="signup-submit">Send me the playbook</button>
       </form>
       <iframe name="signup-response" id="signup-response" title="Form submission response" hidden></iframe>
