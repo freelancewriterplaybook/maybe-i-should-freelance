@@ -15,7 +15,7 @@
 <!-- TODO: social platforms need a real hosted image URL here — data URIs and local
      paths don't work for link previews. Upload og-cover.png (provided separately)
      to your host and point this at it, e.g. https://yoursite.com/og-cover.png -->
-<meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN.com/og-cover.png">
+<meta property="og:image" content="og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <!-- TODO: replace with your real domain before launch -->
@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Maybe I Should Freelance?">
 <meta name="twitter:description" content="A free playbook on building a sustainable freelance writing career.">
-<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-DOMAIN.com/og-cover.png">
+<meta name="twitter:image" content="og-cover.png">
 
 <meta name="theme-color" content="#CFDF2A">
 <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAAAIAADAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAMpJREFUeJxjZICC8/e1/jOQAAwVrzEyMDAwMJGjGVkPIzmakQETJZqxGnDr2i8GV+OnDCcO/YCLrVjwmcHV+CnD378kuKC/9QPDt6//GV48/cswd/InnC5gwSXByMjAMGfSR4aXz/8ysLAyMvz5jT2ocLqgoEqAYfOarwynjv5gKKkXIN0FRhbsDK4+XAxyiiwMsvI4leE2gIGBgSGnXICBg4OR4c6NX+QZwMXFiE+agYFhUCYkkg2A5SpygKHiNUYmGIMczQwMDAwAls0+N/Gtj9UAAAAASUVORK5CYII=" sizes="any">
@@ -245,7 +245,7 @@
   /* ---------- What's inside — plain numbered list, book-style ---------- */
   .toc{ list-style:none; margin:2.2rem 0 0; padding:0; }
   .toc li{
-    display:grid; grid-template-columns:44px 1fr; gap:18px; align-items:flex-start;
+    display:grid; grid-template-columns:44px 1fr; gap:18px; align-items:center;
     padding:22px 0; border-top:1px solid var(--line);
     opacity:0; transform:translateY(10px); transition:opacity .6s ease, transform .6s ease;
   }
@@ -379,7 +379,7 @@
     .wink{ font-size:1.25rem; }
     .divider{ padding:54px 0 66px; }
     .divider h2, .section-head{ max-width:13ch; }
-    .toc li{ grid-template-columns:36px 1fr; gap:14px; padding:20px 0; }
+    .toc li{ grid-template-columns:36px 1fr; gap:14px; padding:20px 0; align-items:center; }
     .quote blockquote{ font-size:1.03rem; }
     .author{ border-radius:12px; }
   }
@@ -459,7 +459,59 @@
   }
   .author h3{ font-family:'Plus Jakarta Sans',-apple-system,sans-serif; font-weight:800; font-size:1.4rem; margin-bottom:6px; }
   .author p{ color:var(--ink-soft); font-size:0.95rem; margin:0 0 14px; }
-  </style>
+  
+  .author-photo-placeholder{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    border:2px solid var(--ink);
+    background:var(--paper);
+    margin:0 0 14px;
+    overflow:hidden;
+  }
+
+
+  @media (max-width:640px){
+    /* Mobile section-heading rhythm */
+    .divider-text .section-kicker{
+      margin-bottom:6px;
+      line-height:1.2;
+    }
+    .divider-text h2,
+    .section-head{
+      margin-top:0;
+      margin-bottom:14px;
+    }
+    .divider-text > p:first-of-type,
+    .divider-text > .divider-body{
+      margin-top:0;
+    }
+    .page .section-head{
+      margin-top:0;
+      margin-bottom:14px;
+    }
+  }
+
+
+  @media (max-width:640px){
+    /* Keep the colour-section heading and its content visually connected.
+       The heading and body are in separate wrappers, so the desktop padding
+       was creating an unnecessarily large gap on mobile. */
+    .divider-body{
+      padding-top:0;
+    }
+    .divider-body .benefits{
+      margin-top:16px;
+    }
+    .divider-body .toc{
+      margin-top:16px;
+    }
+    .divider-text h2{
+      margin-bottom:0;
+    }
+  }
+
+</style>
 </head>
 <body>
 
@@ -602,7 +654,8 @@
       <h2 class="section-head">Stay connected</h2>
       <div class="authors">
         <div class="author">
-          <h3>Aparajita Khandelwal</h3>
+          <div class="author-photo-placeholder" aria-label="Aparajita Khandelwal photo placeholder"></div>
+      <h3>Aparajita Khandelwal</h3>
           <p>Writer, content strategist, and brand storyteller. Founder of Paperhearts Marketing Co, helping indie authors and publishers share their stories with the world.</p>
           <div class="links">
             <a href="https://www.linkedin.com/in/aparajitakhandelwal/">LinkedIn</a>
@@ -610,7 +663,8 @@
           </div>
         </div>
         <div class="author">
-          <h3>Soumya John</h3>
+          <div class="author-photo-placeholder" aria-label="Soumya John photo placeholder"></div>
+      <h3>Soumya John</h3>
           <p>Writer, editor, and content strategist from Bangalore, helping mission-driven startups find their voice — and, on the side, a personal essayist and zine-maker.</p>
           <div class="links">
             <a href="https://www.linkedin.com/in/soumya-john-36456782/">LinkedIn</a>
@@ -627,9 +681,8 @@
     </div>
     <div class="wrap divider-inner">
       <div class="divider-text">
-        <span class="section-kicker">Ready when you are</span>
         <h2>See you on the other side.</h2>
-        <p style="max-width:50ch; margin-top:1rem;">There's no perfect moment to begin — only the moment you decide to take yourself seriously. We hope this makes that decision a little easier.</p>
+        <p style="max-width:50ch; margin-top:1rem;">Take what’s useful, skip what isn’t, and hopefully walk away with a better idea of what freelancing could look like for you.</p>
         <a class="btn on-color" href="#signup" style="margin-top:1.6rem;">Send me the playbook</a>
       </div>
     </div>
