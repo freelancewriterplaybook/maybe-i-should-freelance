@@ -136,7 +136,7 @@
   }
 
   /* ---------- white page — plain text hierarchy, no boxes ---------- */
-  .page{ padding:clamp(48px,8vw,80px) 0; }
+  .page{ padding-top:clamp(48px,8vw,80px); padding-bottom:clamp(48px,8vw,80px); }
   .lede{ font-size:1.08rem; max-width:58ch; color:var(--ink-soft); }
   .lede strong{ color:var(--ink); font-weight:700; }
   .wink{ font-family:'Caveat',cursive; font-weight:700; font-size:1.4rem; color:var(--ink); opacity:.8; margin-top:1.1rem; }
@@ -241,19 +241,27 @@
   .benefit p{ margin:0; color:var(--ink-soft); font-size:0.96rem; line-height:1.55; }
 
   /* ---------- testimonials — plain, thin rule, no box ---------- */
-  .quotes{ display:grid; gap:0; margin-top:1.6rem; }
-  .quote{ padding:26px 0; border-top:1px solid var(--line); }
+  .quotes{ display:grid; gap:0; margin-top:1rem; }
+  .quote{ padding:22px 0; border-top:1px solid var(--line); }
+  @media (max-width:640px){
+    .quotes{ margin-top:.75rem; }
+    .quote{ padding:18px 0; }
+  }
   .quote:last-child{ border-bottom:1px solid var(--line); }
   .quote blockquote{ margin:0 0 12px; font-family:'Kalam',cursive; font-weight:400; font-size:clamp(1.02rem,2.1vw,1.2rem); line-height:1.45; max-width:60ch; }
   .quote cite{ font-style:normal; font-size:0.85rem; color:var(--ink-faint); }
   .quote cite b{ color:var(--ink-soft); font-weight:700; }
 
   /* ---------- authors — bordered cards with a photo, matching the benefit cards ---------- */
-  .authors{ display:grid; grid-template-columns:1fr; gap:20px; margin-top:1.6rem; }
+  .authors{ display:grid; grid-template-columns:1fr; gap:20px; margin-top:1rem; }
   @media (min-width:640px){ .authors{ grid-template-columns:1fr 1fr; } }
   .author{
     background:var(--paper); border:2px solid var(--ink); border-radius:16px;
     padding:28px 24px;
+  }
+  @media (max-width:640px){
+    .authors{ margin-top:.75rem; }
+    .author{ padding:22px 20px; }
   }
   .author .avatar{
     width:88px; height:88px; border-radius:50%; border:2px solid var(--ink);
