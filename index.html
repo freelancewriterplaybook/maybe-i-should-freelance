@@ -292,7 +292,7 @@
   }
 
   .author .author-photo-placeholder{
-    grid-row:1 / span 3;
+    grid-row:1 / span 2;
     width:72px;
     height:72px;
     margin:0;
@@ -721,6 +721,13 @@
     justify-content:center;
     font-family:'Karla',sans-serif;
     font-size:.95rem;
+  }
+
+
+  @media (max-width:760px){
+    .topbar{
+      z-index:70;
+    }
   }
 
   @media (max-width:760px){
@@ -2041,6 +2048,15 @@
     .mobile-break-before{display:block;}
   }
 
+
+/* Mobile only: mirror the final CTA illustration so the raised hand is on the right. */
+@media (max-width:760px){
+  section.final-cta .divider-inner .footer-illustration img{
+    transform: scaleX(-1) !important;
+    transform-origin: center center !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2060,11 +2076,10 @@
 </header>
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
 <div class="mobile-menu-inner">
+        <a href="#authors">About us</a>
 <a href="#inside">What's inside</a>
 <a href="#how-it-helps">How it helps</a>
 <a href="#reviews">Reviews</a>
-<a href="#authors">About us</a>
-<a class="btn mobile-menu-cta" href="#signup">Get the playbook</a>
 </div>
 </nav>
 <main id="main-content">
