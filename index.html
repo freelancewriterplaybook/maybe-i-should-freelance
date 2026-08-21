@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head> <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T0VKWP9H3P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T0VKWP9H3P');
-</script>
+<head>
 <link href="data:image/png;base64,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" rel="icon" type="image/png"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Maybe I Should Freelance? — A free playbook by Aparajita &amp; Soumya</title>
 <meta content="A free playbook on building a sustainable freelance writing career, by Aparajita Khandelwal &amp; Soumya John." name="description"/>
-<!-- TODO: replace with your real domain before launch -->
 <link href="https://freelancewriterplaybook.in/" rel="canonical"/>
 <meta content="Maybe I Should Freelance?" property="og:title"/>
 <meta content="A free playbook on building a sustainable freelance writing career." property="og:description"/>
 <meta content="website" property="og:type"/>
-<!-- TODO: social platforms need a real hosted image URL here — data URIs and local
-     paths don't work for link previews. Upload og-cover.png (provided separately)
-     to your host and point this at it, e.g. https://yoursite.com/og-cover.png -->
-<meta content="og-cover.png" property="og:image"/>
+<meta content="https://freelancewriterplaybook.in/og-cover.png" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<!-- TODO: replace with your real domain before launch -->
 <meta content="https://freelancewriterplaybook.in/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Maybe I Should Freelance?" name="twitter:title"/>
 <meta content="A free playbook on building a sustainable freelance writing career." name="twitter:description"/>
-<meta content="og-cover.png" name="twitter:image"/>
+<meta content="https://freelancewriterplaybook.in/og-cover.png" name="twitter:image"/>
 <meta content="#CFDF2A" name="theme-color"/>
 <link href="favicon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -137,7 +124,7 @@
   .eyebrow{ font-family:'Caveat',cursive; font-weight:700; font-size:1.5rem; color:var(--ink); opacity:.78; display:block; margin-bottom:.4rem; }
   /* ---------- hero rotating question — the visual focus of the hero ---------- */
   .cover h1{
-    font-size:clamp(1.5rem,4vw,2.3rem); max-width:none; margin-top:.3rem;
+    font-size:clamp(1.85rem,5vw,3rem); max-width:none; margin-top:.3rem;
     /* reserve two lines' worth of height at this element's own line-height so the
        typing/deleting animation never reflows the layout — two lines covers every
        question at every breakpoint (verified down to 320px wide) */
@@ -231,7 +218,7 @@
     text-align:center;
     padding:12px;
   }
-  .divider-body{ padding-top:clamp(28px,5vw,44px); }
+  .divider-body{ padding-top:32px; }
   /* ---------- shared section-header style — same size/weight as the big
      divider headlines (What's inside / How it will help / See you on the
      other side), so every section header on the page reads consistently ---------- */
@@ -245,7 +232,7 @@
   }
 
   /* ---------- What's inside — plain numbered list, book-style ---------- */
-  .toc{ list-style:none; margin:2.2rem 0 0; padding:0; }
+  .toc{ list-style:none; margin:0; padding:0; }
   .toc li{
     display:block;
     padding:22px 0; border-top:1px solid var(--line);
@@ -261,7 +248,7 @@
 
   /* ---------- benefits — three cards side by side ---------- */
   /* ---------- benefits — three bordered cards side by side ---------- */
-  .benefits{ display:grid; grid-template-columns:1fr; gap:20px; margin-top:2rem; }
+  .benefits{ display:grid; grid-template-columns:1fr; gap:20px; margin-top:0; }
   @media (min-width:820px){ .benefits{ grid-template-columns:repeat(3, 1fr); gap:20px; } }
   .benefit{
     display:flex; flex-direction:column; gap:14px;
@@ -473,10 +460,18 @@
   }
 
 
+  @media (max-width:640px){
+    .cover h1{
+      font-size:2.15rem;
+      line-height:1.16;
+      min-height:calc(1.16em * 3);
+    }
+  }
+
   @media (max-width:480px){
     .cover{ padding-top:86px; padding-bottom:58px; }
     .cover-text{ padding-bottom:22px; }
-    .cover h1{ font-size:1.5rem; }
+    .cover h1{ font-size:2.1rem; }
     .wink{ font-size:1.25rem; }
     .divider{ padding:54px 0 66px; }
     .divider h2, .section-head{ max-width:13ch; }
@@ -537,12 +532,12 @@
   .signup.is-success .btn{ opacity:.55; }
 
   /* Keep section rhythm consistent: heading, body, then content. */
-  .divider-body{ padding-top:clamp(24px,4vw,38px); }
+  .divider-body{ padding-top:32px; }
   .page{ padding-top:clamp(56px,7vw,76px); padding-bottom:clamp(56px,7vw,76px); }
   .page > .section-head{ margin-bottom:clamp(22px,3vw,34px); }
   .quotes{ margin-top:0; }
   .section-block{ margin-top:clamp(56px,7vw,72px); }
-  .toc{ margin-top:clamp(1.5rem,3vw,2rem); }
+  .toc{ margin-top:0; }
 
 
 
@@ -647,13 +642,11 @@
     }
     .divider-body{
       margin:0;
-      padding-top:18px;
+      padding-top:20px;
     }
-    .divider.paper .divider-body{
-      padding-top:18px;
-    }
+    .divider.paper .divider-body,
     .divider.pink .divider-body{
-      padding-top:18px;
+      padding-top:20px;
     }
     .divider-body .toc,
     .divider-body .benefits{
@@ -680,43 +673,122 @@
   }
 
 
+
+  /* ---------- mobile hamburger navigation ---------- */
+  .menu-toggle{
+    display:none;
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    padding:0;
+    border:2px solid var(--ink);
+    border-radius:6px;
+    background:transparent;
+    color:var(--ink);
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    z-index:72;
+  }
+  .menu-toggle span,
+  .menu-toggle span::before,
+  .menu-toggle span::after{
+    display:block;
+    width:19px;
+    height:2px;
+    background:currentColor;
+    border-radius:2px;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .menu-toggle span{ position:relative; }
+  .menu-toggle span::before,
+  .menu-toggle span::after{
+    content:"";
+    position:absolute;
+    left:0;
+  }
+  .menu-toggle span::before{ top:-6px; }
+  .menu-toggle span::after{ top:6px; }
+
+  .menu-toggle[aria-expanded="true"] span{ background:transparent; }
+  .menu-toggle[aria-expanded="true"] span::before{ transform:translateY(6px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span::after{ transform:translateY(-6px) rotate(-45deg); }
+
+  .mobile-menu{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:60;
+    background:var(--paper);
+    padding:96px var(--pad) 32px;
+  }
+  .mobile-menu-inner{
+    max-width:var(--max-w);
+    margin:0 auto;
+  }
+  .mobile-menu a{
+    display:block;
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+    font-family:'Plus Jakarta Sans',-apple-system,sans-serif;
+    font-size:1.35rem;
+    font-weight:800;
+    text-decoration:none;
+  }
+  .mobile-menu a:first-child{ border-top:1px solid var(--line); }
+  .mobile-menu .mobile-menu-cta{
+    margin-top:24px;
+    border:0;
+    width:100%;
+    justify-content:center;
+    font-family:'Karla',sans-serif;
+    font-size:.95rem;
+  }
+
   @media (max-width:760px){
     .topbar{
       width:100%;
       box-sizing:border-box;
       gap:10px;
-      overflow:hidden;
-      padding-left:16px;
-      padding-right:16px;
+      overflow:visible;
+      padding:10px 16px;
     }
     .topbar .mark2{
       display:none;
     }
     .topbar .desktop-nav{
-      display:flex;
-      flex:1 1 auto;
-      min-width:0;
-      overflow-x:auto;
-      overflow-y:hidden;
-      justify-content:flex-start;
-      gap:18px;
-      margin:0;
-      padding:2px 0 5px;
-      scrollbar-width:none;
-      -webkit-overflow-scrolling:touch;
-    }
-    .topbar .desktop-nav::-webkit-scrollbar{
       display:none;
     }
-    .topbar .desktop-nav a{
-      flex:0 0 auto;
-      font-size:.78rem;
+    .menu-toggle{
+      display:inline-flex;
+      margin-left:auto;
     }
     .topbar .btn.small{
       flex:0 0 auto;
       white-space:nowrap;
-      padding:11px 16px;
+      padding:10px 13px;
       font-size:.76rem;
+      min-height:42px;
+    }
+    .mobile-menu{
+      display:block;
+      transform:translateX(100%);
+      transition:transform .22s ease;
+      visibility:hidden;
+    }
+    .mobile-menu.is-open{
+      transform:translateX(0);
+      visibility:visible;
+    }
+    body.menu-open{
+      overflow:hidden;
+    }
+  }
+
+  @media (min-width:761px){
+    .mobile-menu{
+      display:none !important;
     }
   }
 
@@ -889,6 +961,16 @@
     }
   }
 
+  /* Final CTA illustration: left-align and mirror on mobile. */
+  @media (max-width:760px){
+    .final-cta .footer-illustration{
+      margin-left:0;
+      margin-right:auto;
+      transform:scaleX(-1);
+      transform-origin:center center;
+    }
+  }
+
   @media (max-width:390px){
     .final-cta .divider-inner{
       padding-top:68px;
@@ -905,6 +987,430 @@
     }
   }
 
+
+  /* ==========================================================
+     FINAL SPACING SYSTEM
+     One consistent rhythm for section heading → content.
+     This intentionally overrides older, overlapping spacing rules.
+     ========================================================== */
+
+  /* Section headers inside colour blocks:
+     kicker → heading → content */
+  .divider-text .section-kicker{
+    margin-bottom:6px;
+    line-height:1.2;
+  }
+
+  .divider h2{
+    margin-top:0;
+    margin-bottom:0;
+  }
+
+  .divider-body{
+    padding-top:44px;
+  }
+
+  .divider-body .toc,
+  .divider-body .benefits{
+    margin-top:0;
+  }
+
+  /* Remove one-off spacing from individual TOC items. */
+  .toc li,
+  .toc li:nth-child(3){
+    padding-top:22px;
+    padding-bottom:22px;
+  }
+
+  /* White sections:
+     section heading → first content */
+  .page > .section-head{
+    margin-top:0;
+    margin-bottom:34px;
+  }
+
+  .quotes{
+    margin-top:0;
+  }
+
+  /* Secondary section within the same white page. */
+  .section-block{
+    margin-top:72px;
+  }
+
+  .section-block > .section-head{
+    margin-bottom:28px;
+  }
+
+  .authors{
+    margin-top:0;
+  }
+
+  /* Keep the internal card spacing separate from section spacing. */
+  .author{
+    padding:28px 24px;
+  }
+
+  /* Mobile: slightly tighter, but still visibly separated. */
+  @media (max-width:640px){
+    .divider-body{
+      padding-top:32px;
+    }
+
+    .divider-body .toc,
+    .divider-body .benefits{
+      margin-top:0;
+    }
+
+    .toc li,
+    .toc li:nth-child(3){
+      padding-top:20px;
+      padding-bottom:20px;
+    }
+
+    .page > .section-head{
+      margin-bottom:28px;
+    }
+
+    .section-block{
+      margin-top:52px;
+    }
+
+    .section-block > .section-head{
+      margin-bottom:24px;
+    }
+
+    .authors{
+      margin-top:0;
+    }
+
+    .author{
+      padding:22px 20px;
+    }
+  }
+
+  @media (max-width:480px){
+    .divider-body{
+      padding-top:30px;
+    }
+
+    .page > .section-head{
+      margin-bottom:26px;
+    }
+
+    .section-block{
+      margin-top:48px;
+    }
+  }
+
+
+  /* ==========================================================
+     FINAL MOBILE UX PASS
+     Consolidated overrides after the larger design changes.
+     ========================================================== */
+
+  html{
+    scroll-padding-top:76px;
+  }
+
+  [id]{
+    scroll-margin-top:76px;
+  }
+
+  @media (max-width:760px){
+    .topbar{
+      padding-top:calc(10px + env(safe-area-inset-top));
+      padding-bottom:10px;
+      padding-left:max(16px, var(--pad));
+      padding-right:max(16px, var(--pad));
+      min-height:64px;
+    }
+
+    .topbar .btn.small{
+      padding:10px 11px;
+      min-height:42px;
+      font-size:.75rem;
+      line-height:1.1;
+    }
+
+    .menu-toggle{
+      width:44px;
+      height:44px;
+      flex:0 0 44px;
+      -webkit-tap-highlight-color:transparent;
+      touch-action:manipulation;
+    }
+
+    .mobile-menu{
+      padding-top:calc(84px + env(safe-area-inset-top));
+      padding-bottom:max(28px, env(safe-area-inset-bottom));
+      overflow-y:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+
+    .mobile-menu a{
+      min-height:52px;
+      display:flex;
+      align-items:center;
+      padding:14px 0;
+      font-size:1.2rem;
+      line-height:1.25;
+    }
+
+    .mobile-menu .mobile-menu-cta{
+      min-height:48px;
+      margin-top:20px;
+      padding:13px 18px;
+    }
+
+    /* Keep the hero safely below the fixed navigation and prevent
+       the rotating question from changing the hero's vertical rhythm. */
+    .cover{
+      padding-top:86px;
+    }
+
+    .cover h1{
+      font-size:2.15rem;
+      line-height:1.16;
+      min-height:calc(1.16em * 3);
+    }
+
+    .cover-mascot{
+      width:min(200px,58vw);
+    }
+
+    /* One predictable relationship between a colour-section heading
+       and the content beneath it. */
+    .divider{
+      padding-top:56px;
+      padding-bottom:66px;
+    }
+
+    .divider-inner{
+      display:block;
+      padding:0;
+    }
+
+    .divider-body{
+      padding-top:28px;
+    }
+
+    .divider-body .toc,
+    .divider-body .benefits{
+      margin-top:0;
+    }
+
+    .divider-text .section-kicker{
+      margin-bottom:6px;
+    }
+
+    .divider h2{
+      margin:0;
+      line-height:1.08;
+    }
+
+    /* TOC rows: comfortable reading width and predictable rhythm. */
+    .toc li,
+    .toc li:nth-child(3){
+      padding:20px 0;
+    }
+
+    .toc h3{
+      font-size:1.22rem;
+      line-height:1.28;
+      margin-bottom:7px;
+    }
+
+    .toc p{
+      font-size:.96rem;
+      line-height:1.5;
+    }
+
+    /* Benefit cards: readable padding without making the cards feel
+       oversized on a phone. */
+    .benefits{
+      gap:16px;
+    }
+
+    .benefit{
+      padding:22px 20px 24px;
+      border-radius:14px;
+      gap:10px;
+    }
+
+    .benefit h3{
+      font-size:1.22rem;
+      line-height:1.25;
+      margin-bottom:6px;
+    }
+
+    .benefit p{
+      font-size:.96rem;
+      line-height:1.52;
+    }
+
+    /* Testimonials: no cramped edge-to-edge text. */
+    .page{
+      padding-top:48px;
+      padding-bottom:52px;
+    }
+
+    .page > .section-head{
+      margin-bottom:26px;
+      line-height:1.08;
+    }
+
+    .quotes{
+      margin-top:0;
+    }
+
+    .quote{
+      padding:20px 0;
+    }
+
+    .quote blockquote{
+      font-size:1.04rem;
+      line-height:1.48;
+    }
+
+    /* Author cards stack cleanly and retain enough internal breathing room. */
+    .authors{
+      grid-template-columns:1fr;
+      gap:16px;
+      margin-top:0;
+    }
+
+    .author{
+      padding:22px 20px;
+      border-radius:14px;
+    }
+
+    /* Newsletter form: every control gets a full-width, easy-to-tap target. */
+    .signup{
+      width:100%;
+      max-width:none;
+      flex-direction:column;
+    }
+
+    .signup input[type="email"],
+    .signup .btn{
+      width:100%;
+      min-height:48px;
+    }
+
+    /* Final CTA: illustration stays left-aligned and faces the copy. */
+    .final-cta .divider-inner{
+      padding-top:68px;
+      padding-bottom:68px;
+    }
+
+    .final-cta .footer-illustration{
+      width:min(190px,52vw);
+      margin:0 0 24px 0;
+      transform:scaleX(-1);
+      transform-origin:center center;
+    }
+
+    .final-cta .divider-text h2{
+      max-width:12ch;
+      margin:0;
+      font-size:clamp(2.35rem,9vw,3rem);
+      line-height:1.04;
+    }
+
+    .final-cta .divider-text p{
+      max-width:34ch !important;
+      margin-top:1.25rem !important;
+      font-size:1.05rem;
+      line-height:1.55;
+    }
+
+    .final-cta .divider-text .btn{
+      width:100%;
+      min-height:50px;
+      margin-top:1.5rem !important;
+    }
+
+    /* Footer links shouldn't create accidental horizontal overflow. */
+    footer{
+      width:100%;
+      overflow-wrap:anywhere;
+    }
+  }
+
+  @media (max-width:480px){
+    .topbar .btn.small{
+      font-size:.73rem;
+      padding-left:10px;
+      padding-right:10px;
+    }
+
+    .mobile-menu{
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    .cover{
+      padding-top:86px;
+      padding-bottom:58px;
+    }
+
+    .cover h1{
+      font-size:2.1rem;
+    }
+
+    .divider{
+      padding-top:54px;
+      padding-bottom:62px;
+    }
+
+    .divider-body{
+      padding-top:26px;
+    }
+
+    .divider h2,
+    .page > .section-head{
+      max-width:13ch;
+    }
+
+    .final-cta .divider-inner{
+      padding-top:64px;
+      padding-bottom:64px;
+    }
+
+    .final-cta .footer-illustration{
+      width:min(180px,54vw);
+      margin-bottom:22px;
+    }
+  }
+
+  @media (max-width:360px){
+    .topbar{
+      gap:6px;
+    }
+
+    .topbar .btn.small{
+      font-size:.7rem;
+      padding-left:9px;
+      padding-right:9px;
+    }
+
+    .menu-toggle{
+      width:42px;
+      height:42px;
+      flex-basis:42px;
+    }
+
+    .cover h1{
+      font-size:1.95rem;
+    }
+
+    .toc h3,
+    .benefit h3{
+      font-size:1.15rem;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -918,7 +1424,19 @@
 <a href="#authors">About us</a>
 </nav>
 <a class="btn small" href="#signup">Get the playbook</a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+<span aria-hidden="true"></span>
+</button>
 </header>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+<div class="mobile-menu-inner">
+<a href="#inside">What's inside</a>
+<a href="#how-it-helps">How it helps</a>
+<a href="#reviews">Reviews</a>
+<a href="#authors">About us</a>
+<a class="btn mobile-menu-cta" href="#signup">Get the playbook</a>
+</div>
+</nav>
 <main id="main-content">
 <section class="cover">
 <div class="wrap cover-inner">
@@ -1137,6 +1655,49 @@
     });
   })();
 
+
+
+  // ---------- mobile hamburger navigation ----------
+  (function(){
+    var toggle = document.getElementById('menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if(!toggle || !menu) return;
+
+    var links = menu.querySelectorAll('a');
+
+    function closeMenu(restoreFocus){
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      menu.setAttribute('aria-hidden', 'true');
+      menu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+      if(restoreFocus) toggle.focus();
+    }
+
+    function openMenu(){
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+      menu.setAttribute('aria-hidden', 'false');
+      menu.classList.add('is-open');
+      document.body.classList.add('menu-open');
+      if(links.length) links[0].focus();
+    }
+
+    toggle.addEventListener('click', function(){
+      if(toggle.getAttribute('aria-expanded') === 'true') closeMenu(false);
+      else openMenu();
+    });
+
+    links.forEach(function(link){
+      link.addEventListener('click', function(){ closeMenu(false); });
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true'){
+        closeMenu(true);
+      }
+    });
+  })();
 
   var topbar = document.getElementById('topbar');
   window.addEventListener('scroll', function(){
