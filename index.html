@@ -1419,19 +1419,20 @@
   }
 
 
-  /* ---------- mobile coloured section inset ---------- */
+  /* ---------- mobile coloured sections: full-bleed ---------- */
   @media (max-width:640px){
+    /* Colour blocks run all the way to the viewport edges on mobile.
+       Keep the copy inset inside the block via the .wrap padding below. */
     .divider{
-      margin-left:16px;
-      margin-right:16px;
-      border-radius:16px;
-      overflow:hidden;
+      margin-left:0;
+      margin-right:0;
+      border-radius:0;
     }
 
     .divider .wave-divider{
-      margin-left:-16px;
-      margin-right:-16px;
-      width:calc(100% + 32px);
+      margin-left:0;
+      margin-right:0;
+      width:100%;
     }
 
     .divider .wrap{
@@ -1891,7 +1892,6 @@
 
   /* ---------- mobile section rhythm + wave cleanup ---------- */
   @media (max-width:640px){
-    /* Keep the section heading and the first content block visually connected. */
     .divider.paper .divider-body,
     .divider.pink .divider-body{
       padding-top:8px;
@@ -1902,11 +1902,55 @@
       margin-top:0;
     }
 
-    /* The desktop wave is too deep on a narrow screen.
-       Keep a small, clean curve rather than compressing the existing wave. */
+    /* Mobile uses the waves as the transition BETWEEN cards. The desktop
+       wave belongs to the preceding section, but the mobile cards are inset
+       and rounded, so the wave must be allowed to escape the card and sit
+       over the next card's top edge. */
+    .divider{
+      overflow:visible;
+    }
+
     .divider .wave-divider{
       height:18px;
+      z-index:10;
+      left:0;
+      right:0;
+    }
+
+    /* Keep the transition wave inside the same 16px mobile card width. */
+    .divider .wave-divider{
+      margin-left:0;
+      margin-right:0;
+      width:100%;
+    }
+
+    /* The following card provides the solid colour underneath the wave.
+       Remove only its top rounding so the wave is the single visible edge. */
+    .divider + .divider{
+      border-top-left-radius:0;
+      border-top-right-radius:0;
+    }
+
+    /* The wave should sit directly against the following card. */
+    .divider .wave-bottom{
+      bottom:-1px;
       transform:none;
+    }
+
+    .divider .wave-top{
+      top:-1px;
+      transform:scaleY(-1);
+    }
+
+    .final-cta{
+      border-top-left-radius:0;
+      border-top-right-radius:0;
+    }
+
+    #how-it-helps{
+      position:relative;
+      z-index:3;
+      margin-top:0;
     }
   }
 
