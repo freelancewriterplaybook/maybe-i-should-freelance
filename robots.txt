@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Older versions of the landing page. These are still served by GitHub Pages,
+# so they are blocked to stop them being indexed as duplicates of /.
+Disallow: /index-v1.html
+Disallow: /v2/
+
+Sitemap: https://freelancewriterplaybook.in/sitemap.xml
