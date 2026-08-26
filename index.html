@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Maybe I Should Freelance? — A free playbook by Aparajita &amp; Soumya</title>
-<meta content="A free playbook on building a sustainable freelance writing career, by Aparajita Khandelwal &amp; Soumya John." name="description"/>
+<meta content="A free playbook by Aparajita K. and Soumya J. on the business, art, and reality of freelance writing" name="description"/>
 <link href="https://freelancewriterplaybook.in/" rel="canonical"/>
 <meta content="Maybe I Should Freelance?" property="og:title"/>
-<meta content="A free playbook on building a sustainable freelance writing career." property="og:description"/>
+<meta content="A free playbook by Aparajita K. and Soumya J. on the business, art, and reality of freelance writing" property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://freelancewriterplaybook.in/og-cover.png" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
@@ -17,7 +17,7 @@
 <meta content="https://freelancewriterplaybook.in/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Maybe I Should Freelance?" name="twitter:title"/>
-<meta content="A free playbook on building a sustainable freelance writing career." name="twitter:description"/>
+<meta content="A free playbook by Aparajita K. and Soumya J. on the business, art, and reality of freelance writing" name="twitter:description"/>
 <meta content="https://freelancewriterplaybook.in/og-cover.png" name="twitter:image"/>
 <meta content="#CFDF2A" name="theme-color"/>
 <link href="favicon.png" rel="apple-touch-icon"/>
@@ -320,7 +320,7 @@
     width:100%;
     height:100%;
     border-radius:50%;
-    border:2px solid var(--ink);
+    border:2px solid var(--pink);
     object-fit:cover;
     display:block;
   }
@@ -576,7 +576,7 @@
     width:64px;
     height:64px;
     border-radius:50%;
-    border:2px solid var(--ink);
+    border:2px solid var(--pink);
     background:var(--paper);
     margin:0 0 14px;
     overflow:hidden;
@@ -1653,9 +1653,12 @@
       position:static;
       width:min(1000px, calc(100% - 48px));
       max-width:1000px;
-      min-height:460px;
-      padding-top:80px;
-      padding-bottom:80px;
+      /* Height tracks the illustration, which is now fluid (min(440px,31vw)).
+         A fixed 460px/80px left a lot of empty violet on narrower screens.
+         Caps at the original values from ~1360px up. */
+      min-height:min(460px, 34vw);
+      padding-top:clamp(56px, 5.6vw, 80px);
+      padding-bottom:clamp(56px, 5.6vw, 80px);
     }
 
     .final-cta .divider-text{
@@ -1680,7 +1683,9 @@
       z-index:1;
       right:max(0px, calc((100vw - 1440px) / 2));
       bottom:0;
-      width:440px;
+      /* Scales down below ~1420px so it can't crowd the CTA copy at
+         tablet/small-laptop widths. Caps at 440px on wide screens. */
+      width:min(440px, 31vw);
       height:auto;
       margin:0;
     }
@@ -1841,7 +1846,9 @@
       z-index:1;
       right:max(0px, calc((100vw - 1440px) / 2));
       bottom:0;
-      width:440px;
+      /* Scales down below ~1420px so it can't crowd the CTA copy at
+         tablet/small-laptop widths. Caps at 440px on wide screens. */
+      width:min(440px, 31vw);
       height:auto;
       margin:0;
     }
@@ -2200,16 +2207,14 @@
 <h2 class="section-head">What readers are saying</h2>
 <div class="quotes">
 <div class="quote" data-reveal="">
-<blockquote>"This is not a boring, checked-out guide — I can hear the authors' voices as I read this. It makes me want to print some sections out and put them up on my board for the days when work feels like it's spiraling."</blockquote>
-<cite><b>Lakshmi Krishnakumar</b> — Founder, LikeLoveWeddings</cite>
-</div>
-<div class="quote" data-reveal="">
 <blockquote>"Birthed directly from a decade of the authors' own trials, errors, and leaps of faith, this playbook addresses everything from building a rate card to navigating the evolving AI landscape. An incredibly grounding, practical, and deeply reassuring read."</blockquote>
 <cite><b>Nisha Ravi</b> — Independent Marketing Strategist</cite>
 </div>
-<div class="quote" data-reveal="">
-<blockquote>"I think this is such a useful resource for anyone at the beginning of their freelance journey. As a founder, I’m well past that stage myself, but reading through it made me think about how much easier those early years could have been with something like this. And I don’t think it’s limited to writers either — a lot of the advice applies to creatives figuring out how to turn their skills into a sustainable career. Practical, straightforward and genuinely useful without making the process feel overwhelming."</blockquote>
-<cite><b>Reema Mukherjee</b> — CoFounder, YoursBossy</cite>
+<div class="quote" data-reveal=""><blockquote>"This is, on paper, a freelance writing guide. But really, it’s just two people gifting you a messy decade of figuring it out by themselves so you don’t have to do it in isolation. It keeps you at the centre of the work and serves hard truths the way a good teacher does, acting as a mirror that warns before it exposes you."</blockquote>
+<cite><b>Reema Mukherjee</b> — Cofounder, Yours Bossy</cite>
+</div>
+<div class="quote" data-reveal=""><blockquote>"It doesn’t make freelancing sound like the dreamy ‘work from anywhere, be your own boss’ life we see all over LinkedIn. It talks about the messy bits too — inconsistent work, rejection, difficult clients, pricing, boundaries, and that occasional ‘what am I even doing?’ feeling. It feels less like a ‘how to freelance’ manual and more like two people who have actually been through it sitting down and telling you what they wish they had known earlier."</blockquote>
+<cite><b>Sakshi Gusain</b> — Freelance Content Strategist</cite>
 </div>
 </div>
 <div class="section-block" id="authors">
@@ -2384,8 +2389,8 @@
       'Where do you find clients?',
       'How do you pitch yourself?',
       'How do you price a project?',
-      'Can you build a sustainable career?',
-      'And who do you ask all this?'
+      'How do you build a sustainable career?',
+      'And who has all the answers?'
     ];
     var el = document.getElementById('rotator-text');
     if(!el) return;
